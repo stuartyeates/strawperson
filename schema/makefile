@@ -2,7 +2,6 @@
 #The three different schemas for each of the main variants of TEI
 FILES_ALL=tei_all.dtd tei_all.rng tei_all.xsd 
 FILES_LITE=teilite.dtd teilite.rng teilite.xsd 
-FILES_TITE=tei_tite.dtd tei_tite.rng tei_tite.xsd 
 FILES_MS=tei_ms.dtd tei_ms.rng tei_ms.xsd 
 FILES_BARE=tei_bare.dtd tei_bare.rng tei_bare.xsd 
 FILES_SPEECH=tei_speech.dtd tei_speech.rng tei_speech.xsd 
