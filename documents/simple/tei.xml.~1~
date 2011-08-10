@@ -1,0 +1,21 @@
+<TEI xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+	<title>Tiny TEI document </title>
+      </titleStmt>
+      <publicationStmt>
+	<p>sample TEI document</p>
+      </publicationStmt>
+      <sourceDesc>
+	<p>Inferred from the standard</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div>
+      </div>
+    </body>
+  </text>
+</TEI>
