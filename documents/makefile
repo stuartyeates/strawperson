@@ -5,7 +5,7 @@ archimedespalimpsest.net \
 idp.data
 
 
-all: download validate build
+all:
 
 download: 
 	set -e; for dir in ${DIRS} ; do  ${MAKE} -C $$dir download; done

@@ -10,6 +10,8 @@ document.teip5.xml:
 
 validate:
 
+build:
+
 allclean: clean
 	rm document.teip5.xml
 	rm *.jpg
