@@ -2,7 +2,8 @@
 DIRS=simple \
 www.oss-watch.ac.uk \
 archimedespalimpsest.net \
-idp.data
+idp.data \
+dspace.nitle.org \
 
 
 all:

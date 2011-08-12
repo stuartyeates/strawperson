@@ -12,7 +12,7 @@ validate:
 build:
 
 allclean: clean
-	rm document.teip5.xml
+	rm -f document.teip5.xml
 
 clean:
 

@@ -1,10 +1,10 @@
-#The three different schemas for each of the main variants of TEI
-DIRS=schema documents engine styles build test
+DIRS=foreign-xsl tei2html
 
-all: download validate build
+all: 
+
 
 download: 
-	set -e; for dir in ${DIRS} ; do  ${MAKE} -C $$dir all; done
+	set -e; for dir in ${DIRS} ; do  ${MAKE} -C $$dir download; done
 
 validate:
 	set -e; for dir in ${DIRS} ; do  ${MAKE} -C $$dir validate; done

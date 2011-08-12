@@ -1,8 +1,7 @@
-#The three different schemas for each of the main variants of TEI
-DIRS=schema engine styles build  documents 
+DIRS=
 
+all: 
 
-all: download validate build
 
 download: 
 	set -e; for dir in ${DIRS} ; do  ${MAKE} -C $$dir download; done
@@ -20,8 +19,3 @@ clean:
 	set -e; for dir in ${DIRS} ; do  ${MAKE} -C $$dir clean; done
 
 .PHONY: all clean allclean validate download
-
-#processing rules for individual files
-document.teip5.xml: document.teip4.xml
-	xsltproc  --novalid  ./p4top5.xsl ./document.teip4.xml | xmllint --format - > ./document.teip5.xml
-
