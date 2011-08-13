@@ -29,7 +29,7 @@ xml.xsd:
 	wget http://www.w3.org/2001/03/xml.xsd
 
 allclean: clean
-	rm $(FILES)
+	rm -f $(FILES)
 
 clean:
 

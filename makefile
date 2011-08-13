@@ -1,5 +1,5 @@
 #The three different schemas for each of the main variants of TEI
-DIRS=schema engine styles build  documents 
+DIRS=schema transforms styles build  documents 
 
 
 all: download validate build
