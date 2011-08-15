@@ -9,11 +9,11 @@ FILES_DRAMA=tei_drama.dtd tei_drama.rng tei_drama.xsd
 FILES_EXTRA=xml.xsd
 
 # All the files at once
-FILES=$(FILES_ALL) $(FILES_LITE) $(FILES_TITE) $(FILES_MS) $(FILES_BARE) $(FILES_SPEECH) $(FILES_DRAMA)  $(FILES_EXTRA)  
+FILES=${FILES_ALL} $(FILES_LITE) $(FILES_MS) $(FILES_BARE) $(FILES_SPEECH) $(FILES_DRAMA)  $(FILES_EXTRA)  
 
 all: validate
 
-download: $(FILES)
+download: ${FILES}
 
 validate: download
 	for file in *.rng *.xsd; do xmllint --noout $$file; echo validated $$file; done
@@ -29,8 +29,10 @@ xml.xsd:
 	wget http://www.w3.org/2001/03/xml.xsd
 
 allclean: clean
-	rm -f $(FILES)
+	rm -f ${FILES}
 
 clean:
 
-.PHONY: clean allclean validate
+build:
+
+.PHONY: clean allclean validate build

@@ -12,7 +12,7 @@ validate:
 build:
 
 allclean: 
-	rm p4top5.xsl
+	rm -f p4top5.xsl
 
 clean:
 

@@ -1,4 +1,4 @@
-DIRS=
+DIRS=plain
 
 all: 
 
@@ -18,4 +18,4 @@ allclean:
 clean:
 	set -e; for dir in ${DIRS} ; do  ${MAKE} -C $$dir clean; done
 
-.PHONY: all clean allclean validate download
+.PHONY: all clean allclean validate download build

@@ -1,6 +1,14 @@
 #The three different schemas for each of the main variants of TEI
-DIRS=schema transforms styles build  documents 
+DIRS=schema transforms styles documents 
+export TRANSFORMS=identity-xsl-10  identity-xsl-20 tei2html5
+export DOCUMENTS=simple \
+www.oss-watch.ac.uk \
+archimedespalimpsest.net \
+idp.data \
+dspace.nitle.org \
 
+#DATESTAMP= date "+%Y-%m-%d-%H-%M-%N"
+DATESTAMP=$(shell date "+%Y-%m-%d-%H-%M-%N")
 
 all: download validate build
 
@@ -10,16 +18,37 @@ download:
 validate:
 	set -e; for dir in ${DIRS} ; do  ${MAKE} -C $$dir validate; done
 
+
 build:
 	set -e; for dir in ${DIRS} ; do  ${MAKE} -C $$dir build; done
+	set -e; for document in ${DOCUMENTS}; do     \
+         for transform in ${TRANSFORMS};  do          \
+           mkdir -p build/$$document/$$transform;                    \
+           saxonb-xslt -o:build/$$document/$$transform/output.xml  ./documents/$$document/document.teip5.xml ./transforms/$$transform/transform.xsl;   \
+         done;                      \
+	 saxonb-xslt -o:build/$$document/tei2html5/output.html5  ./documents/$$document/document.teip5.xml ./transforms/tei2html5/transform.xsl;   \
+                                        \
+        done; 
+	set -e; for file in `find ./build* -name '*.xml'` ; do  xmllint --noout $$file  2> $$file.xmllint.error ; done || true
+	for file in `find ./build* -name '*.html5'` ; do  tidy -errors $$file  2> $$file.tidy.error ; done || true
+	mv build ./build-${DATESTAMP}
+
+
+#	set -e; for doc in ${DOCS} ; do \
+#                   for transform in  ${TRANSFORMS} ; do \
+#                      mkdir -p ./${DATESTAMP}/$$doc/$$transform; \
+#                      saxonb-xslt  ./documents/$$doc/document.teip5.xml ./transforms/$$transform/transform.xsl  > ./${DATESTAMP}/$$doc/$$transform/output.xml ; \
+#                   done	; \
+#                done;
 
 allclean: 
 	set -e; for dir in ${DIRS} ; do  ${MAKE} -C $$dir allclean; done
 
 clean:
 	set -e; for dir in ${DIRS} ; do  ${MAKE} -C $$dir clean; done
+	rm -rf build-20*
 
-.PHONY: all clean allclean validate download
+.PHONY: all clean allclean validate download build
 
 #processing rules for individual files
 document.teip5.xml: document.teip4.xml

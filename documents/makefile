@@ -1,9 +1,5 @@
 #The three different schemas for each of the main variants of TEI
-DIRS=simple \
-www.oss-watch.ac.uk \
-archimedespalimpsest.net \
-idp.data \
-dspace.nitle.org \
+DIRS=${DOCUMENTS}
 
 
 all:

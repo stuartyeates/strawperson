@@ -1,4 +1,4 @@
-DIRS=foreign-xsl tei2html
+DIRS=foreign-xsl tei2html5
 
 all: 
 
