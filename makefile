@@ -7,7 +7,7 @@ archimedespalimpsest.net \
 idp.data \
 dspace.nitle.org \
 
-#DATESTAMP= date "+%Y-%m-%d-%H-%M-%N"
+
 DATESTAMP=$(shell date "+%Y-%m-%d-%H-%M-%N")
 
 all: download validate build
@@ -30,7 +30,7 @@ build:
                                         \
         done; 
 	set -e; for file in `find ./build* -name '*.xml'` ; do  xmllint --noout $$file  2> $$file.xmllint.error ; done || true
-	for file in `find ./build* -name '*.html5'` ; do  tidy -errors $$file  2> $$file.tidy.error ; done || true
+	for file in `find ./build* -name '*.html5'` ; do  tidy -utf8 -errors $$file  2> $$file.tidy.error ; done || true
 	mv build ./build-${DATESTAMP}
 
 
@@ -41,7 +41,7 @@ build:
 #                   done	; \
 #                done;
 
-allclean: 
+allclean: clean
 	set -e; for dir in ${DIRS} ; do  ${MAKE} -C $$dir allclean; done
 
 clean:
