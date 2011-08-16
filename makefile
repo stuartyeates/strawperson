@@ -1,6 +1,6 @@
 #The three different schemas for each of the main variants of TEI
 DIRS=schema transforms styles documents 
-export TRANSFORMS=identity-xsl-10  identity-xsl-20 tei2html5
+export TRANSFORMS=identity-xsl-10 identity-xsl-20 tei2html5 p4top5 tei2kml
 export DOCUMENTS=simple \
 www.oss-watch.ac.uk \
 archimedespalimpsest.net \
