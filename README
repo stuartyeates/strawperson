@@ -20,7 +20,7 @@ faster feedback loops between document creators / curators and tool
 builders and more cooperation between TEI projects.
 
 There are a number of very simple documents and very simple transforms 
-included in strawperson. 
+included in strawperson. The initial validators are xmllint and HTML tidy.
 
 The intention is to add more validators and better reporting on the results,
 but that's not done yet. The intention is to also add more complex 
@@ -28,4 +28,6 @@ transformations such as the transformation used for the standard (is there
 an official name for that?). Adding more documents from the list of samples 
 at http://wiki.tei-c.org/index.php/Samples is fairly straight-forward.
 
-strawperson is primarily written as a series of makefiles.
+strawperson is primarily written as a series of makefiles. It assumes a
+POSIX computer but is currently only tested on Ubuntu.
+
