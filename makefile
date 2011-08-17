@@ -1,11 +1,9 @@
 #The three different schemas for each of the main variants of TEI
 DIRS=schema transforms styles documents 
 export TRANSFORMS=identity-xsl-10 identity-xsl-20 tei2html5 p4top5 tei2kml
-export DOCUMENTS=simple simple-name-header simple-name-header simple-name-multiple simple-corpus \
-www.oss-watch.ac.uk \
-archimedespalimpsest.net \
-idp.data \
-dspace.nitle.org \
+export LOCAL_DOCUMENTS=simple simple-name-header simple-name-header simple-name-multiple simple-corpus 
+export REMOTE_DOCUMENTS=www.oss-watch.ac.uk archimedespalimpsest.net idp.data dspace.nitle.org www.nzetc.org
+export DOCUMENT=${LOCAL_DOCUMENTS} ${REMOTE_DOCUMENTS}
 
 
 DATESTAMP=$(shell date "+%Y-%m-%d-%H-%M-%N")
