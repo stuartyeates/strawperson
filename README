@@ -1,6 +1,31 @@
 strawperson is framework to get bring together TEI document curators, tool builders and validators
 
-Many TEI projects have traditionally focused their own tools on their
+Many TEI projects have traditionally focused their own tools on their own
 documents with a relatively small number of cross-collection tool 
 builders building tools centrally, distributing tools and and collecting
 bug reports and suggestions for improvement.
+
+strawperson is a framework aiming to show that third-party tools can run 
+over third-party documents and the outputs validated using third party 
+tools.
+
+strawperson works by collecting a range of TEI document from various sites 
+around the internet (by preference getting the very latest versions from 
+source control), getting a range of TEI transformations from sites around 
+the internet (again from source control) and then running all the 
+transformations on all the documents and validating the outputs.
+
+It is hoped that this will encourage more regularisation of TEI encoding,
+faster feedback loops between document creators / curators and tool 
+builders and more cooperation between TEI projects.
+
+There are a number of very simple documents and very simple transforms 
+included in strawperson. 
+
+The intention is to add more validators and better reporting on the results,
+but that's not done yet. The intention is to also add more complex 
+transformations such as the transformation used for the standard (is there
+an official name for that?). Adding more documents from the list of samples 
+at http://wiki.tei-c.org/index.php/Samples is fairly straight-forward.
+
+strawperson is primarily written as a series of makefiles.
