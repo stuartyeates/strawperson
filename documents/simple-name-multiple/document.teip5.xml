@@ -1,0 +1,23 @@
+<TEI xml:lang="en" xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+	<title>Tiny TEI document </title>
+	<author><name key="https://secure.wikimedia.org/wikipedia/en/wiki/User:Stuartyeates" type="person">Stuart Yeates</name></author>
+      </titleStmt>
+      <publicationStmt>
+	<p>sample TEI document</p>
+      </publicationStmt>
+      <sourceDesc>
+	<p>Inferred from the standard</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div>
+	<p>This is a really basic TEI document, written by <name key="http://en.wikipedia.org/wiki/User:Stuartyeates" type="person">Stuart Yeates</name> but not by  <name key="http://en.wikipedia.org/wiki/Albert_Einstein" type="person">Albert Einstein</name>. Note VIAF link on the bottom of that page.</p>
+      </div>
+    </body>
+  </text>
+</TEI>

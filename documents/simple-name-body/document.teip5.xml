@@ -1,0 +1,22 @@
+<TEI xml:lang="en" xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+	<title>Tiny TEI document </title>
+      </titleStmt>
+      <publicationStmt>
+	<p>sample TEI document</p>
+      </publicationStmt>
+      <sourceDesc>
+	<p>Inferred from the standard</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div>
+	<p>This is a really basic TEI document, written by <name key="https://secure.wikimedia.org/wikipedia/en/wiki/User:Stuartyeates" type="person">Stuart Yeates</name>.</p>
+      </div>
+    </body>
+  </text>
+</TEI>
