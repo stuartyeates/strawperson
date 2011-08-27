@@ -1,4 +1,4 @@
-DIRS=p4top5 tei2html5 tei2kml
+DIRS=${TRANSFORMS}
 
 all: 
 

@@ -1,9 +1,9 @@
 #The three different schemas for each of the main variants of TEI
 DIRS=schema transforms styles documents 
-export TRANSFORMS=identity-xsl-10 identity-xsl-20 tei2html5 p4top5 tei2kml
+export TRANSFORMS=identity-xsl-10 identity-xsl-20 tei2html5 p4top5 tei2kml sbl-site
 export LOCAL_DOCUMENTS=simple simple-name-header simple-name-header simple-name-multiple simple-corpus 
-export REMOTE_DOCUMENTS=www.oss-watch.ac.uk archimedespalimpsest.net idp.data dspace.nitle.org www.nzetc.org freedict
-export DOCUMENT=${LOCAL_DOCUMENTS} ${REMOTE_DOCUMENTS}
+export REMOTE_DOCUMENTS=www.oss-watch.ac.uk archimedespalimpsest.net idp.data dspace.nitle.org www.nzetc.org freedict sbl-site indology ducange
+export DOCUMENTS=${LOCAL_DOCUMENTS} ${REMOTE_DOCUMENTS}
 
 
 DATESTAMP=$(shell date "+%Y-%m-%d-%H-%M-%N")
@@ -18,13 +18,15 @@ validate:
 
 
 build:
+	mkdir -p ./build/
 	set -e; for dir in ${DIRS} ; do  ${MAKE} -C $$dir build; done
 	set -e; for document in ${DOCUMENTS}; do     \
          for transform in ${TRANSFORMS};  do          \
-           mkdir -p build/$$document/$$transform;                    \
-           saxonb-xslt -o:build/$$document/$$transform/output.xml  ./documents/$$document/document.teip5.xml ./transforms/$$transform/transform.xsl;   \
+           echo doing: $$document / $$transform ;    \
+           mkdir -p ./build/$$document/$$transform;                    \
+           saxonb-xslt -o:./build/$$document/$$transform/output.xml  ./documents/$$document/document.teip5.xml ./transforms/$$transform/transform.xsl;   \
          done;                      \
-	 saxonb-xslt -o:build/$$document/tei2html5/output.html5  ./documents/$$document/document.teip5.xml ./transforms/tei2html5/transform.xsl;   \
+	 saxonb-xslt -o:./build/$$document/tei2html5/output.html5  ./documents/$$document/document.teip5.xml ./transforms/tei2html5/transform.xsl;   \
                                         \
         done; 
 	set -e; for file in `find ./build* -name '*.xml'` ; do  xmllint --noout $$file  2> $$file.xmllint.error ; done || true
