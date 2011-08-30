@@ -9,7 +9,7 @@ document.teip4.xml:
 
 
 document.teip5.xml: document.teip4.xml
-	xsltproc  --novalid  ../../transforms/p4top5/transform.xsl ./document.teip4.xml | xmllint --format - > ./document.teip5.xml
+	xsltproc  --novalid  ../../transforms/p4top5/transform.xsl10.xsl ./document.teip4.xml | xmllint --format - > ./document.teip5.xml
 
 validate:
 

@@ -4,8 +4,6 @@ all:
 
 download: ${FILES}
 
-transform.xsl:
-
 validate:
 
 build:

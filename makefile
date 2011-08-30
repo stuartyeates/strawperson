@@ -1,6 +1,8 @@
 #The three different schemas for each of the main variants of TEI
 DIRS=schema transforms styles documents 
-export TRANSFORMS=identity-xsl-10 identity-xsl-20 tei2html5 p4top5 tei2kml sbl-site
+export XSL10_TRANSFORMS=identity-xsl-10 p4top5 tei2kml
+export XSL20_TRANSFORMS=identity-xsl-20 tei2html5 sbl-site
+export TRANSFORMS=${XSL10_TRANSFORMS} ${XSL20_TRANSFORMS}
 export LOCAL_DOCUMENTS=simple simple-name-header simple-name-header simple-name-multiple simple-corpus 
 export REMOTE_DOCUMENTS=www.oss-watch.ac.uk archimedespalimpsest.net idp.data dspace.nitle.org www.nzetc.org freedict sbl-site indology ducange
 export DOCUMENTS=${LOCAL_DOCUMENTS} ${REMOTE_DOCUMENTS}
@@ -17,20 +19,33 @@ validate:
 	set -e; for dir in ${DIRS} ; do  ${MAKE} -C $$dir validate; done
 
 
-build:
-	mkdir -p ./build/
+build: new-dir all-transforms all-xmllint all-htmltidy move-dir
 	set -e; for dir in ${DIRS} ; do  ${MAKE} -C $$dir build; done
+
+new-dir:
+	mkdir -p ./build/
+
+all-transforms:
 	set -e; for document in ${DOCUMENTS}; do     \
-         for transform in ${TRANSFORMS};  do          \
+         for transform in ${XSL20_TRANSFORMS};  do          \
            echo doing: $$document / $$transform ;    \
            mkdir -p ./build/$$document/$$transform;                    \
-           saxonb-xslt -o:./build/$$document/$$transform/output.xml  ./documents/$$document/document.teip5.xml ./transforms/$$transform/transform.xsl;   \
+              saxonb-xslt -o:./build/$$document/$$transform/output.xml  ./documents/$$document/document.teip5.xml ./transforms/$$transform/transform.xsl20.xsl; \
          done;                      \
-	 saxonb-xslt -o:./build/$$document/tei2html5/output.html5  ./documents/$$document/document.teip5.xml ./transforms/tei2html5/transform.xsl;   \
-                                        \
+         for transform in ${XSL10_TRANSFORMS};  do          \
+           echo doing: $$document / $$transform ;    \
+           mkdir -p ./build/$$document/$$transform;                    \
+              xsltproc  --novalid --output  ./build/$$document/$$transform/output.xml ./transforms/$$transform/transform.xsl10.xsl ./documents/$$document/document.teip5.xml;  \
+         done;                      \
         done; 
+
+all-xmllint:
 	set -e; for file in `find ./build* -name '*.xml'` ; do  xmllint --noout $$file  2> $$file.xmllint.error ; done || true
+
+all-htmltidy:
 	for file in `find ./build* -name '*.html5'` ; do  tidy -utf8 -errors $$file  2> $$file.tidy.error ; done || true
+
+move-dir:
 	mv build ./build-${DATESTAMP}
 
 
@@ -49,8 +64,4 @@ clean:
 	rm -rf build-20*
 
 .PHONY: all clean allclean validate download build
-
-#processing rules for individual files
-document.teip5.xml: document.teip4.xml
-	xsltproc  --novalid  ./p4top5.xsl ./document.teip4.xml | xmllint --format - > ./document.teip5.xml
 

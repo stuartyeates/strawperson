@@ -1,11 +1,11 @@
-FILES=transform.xsl
+FILES=transform.xsl10.xsl
 
 all: 
 
 download: ${FILES}
 
-transform.xsl:
-	wget --output-document=transform.xsl "http://tei.svn.sourceforge.net/viewvc/tei/trunk//P5/Test/tei2kml.xsl"
+transform.xsl10.xsl:
+	wget --output-document=transform.xsl10.xsl "http://tei.svn.sourceforge.net/viewvc/tei/trunk//P5/Test/tei2kml.xsl"
 
 validate:
 
