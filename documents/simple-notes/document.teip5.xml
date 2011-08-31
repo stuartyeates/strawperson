@@ -1,0 +1,88 @@
+<TEI xml:lang="en" xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+	<title>Li Europan lingues </title>
+      </titleStmt>
+      <publicationStmt>
+	<p>sample TEI document</p>
+      </publicationStmt>
+      <sourceDesc>
+	<p><ref target="http://en.wikipedia.org/wiki/Li_Europan_lingues">Li Europan lingues </ref></p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div xml:lang="ile">
+	 <head>Li Europan lingues</head>
+<p>    Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica,<note place="left" xml:lang="en">This is a left note</note> li<note place="left" xml:lang="en">This is a left note, near the previous one</note> pronunciation<note place="right" xml:lang="en">This is a right note</note> e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores.</p>
+
+    <p>At solmen va esser necessi far uniform grammatica,<note place="foot" xml:lang="en">This is a foot note</note><note place="foot" xml:lang="en">This is a foot note, adjacent to the previous one</note> pronunciation e plu sommun paroles. Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental in fact, it va esser Occidental. A un Angleso it va semblar un simplificat Angles, quam un skeptic Cambridge amico dit me que Occidental es.</p>
+      </div>
+
+       <div xml:lang="en">
+	 <head>The European languages</head>
+	 <p>The<note place="foot" xml:lang="en">This is a foot note</note>
+	 European<note place="foot" xml:lang="en">This is a foot note</note> 
+	 languages<note place="foot" xml:lang="en">This is a foot note</note> 
+	 are<note place="foot" xml:lang="en">This is a foot note</note> 
+	 members<note place="foot" xml:lang="en">This is a foot note</note> 
+	 of<note place="foot" xml:lang="en">This is a foot note</note> 
+	 the<note place="foot" xml:lang="en">This is a foot note</note>
+	 same<note place="foot" xml:lang="en">This is a foot note</note> 
+	 family.<note place="foot" xml:lang="en">This is a foot note</note> 
+	 Their<note place="foot" xml:lang="en">This is a foot note</note> 
+	 separate<note place="foot" xml:lang="en">This is a foot note</note> 
+	 existence<note place="foot" xml:lang="en">This is a foot note</note> 
+	 is<note place="foot" xml:lang="en">This is a foot note</note> 
+	 a<note place="foot" xml:lang="en">This is a foot note</note>
+	 myth.<note place="foot" xml:lang="en">This is a foot note</note> 
+	 For<note place="foot" xml:lang="en">This is a foot note</note> 
+	 science,<note place="foot" xml:lang="en">This is a foot note</note> 
+	 music,<note place="foot" xml:lang="en">This is a foot note</note> 
+	 sport,<note place="foot" xml:lang="en">This is a foot note</note>
+	 etc,<note place="foot" xml:lang="en">This is a foot note</note>
+	 Europe<note place="foot" xml:lang="en">This is a foot note</note> 
+	 uses<note place="foot" xml:lang="en">This is a foot note</note> 
+	 the<note place="foot" xml:lang="en">This is a foot note</note> 
+	 same<note place="foot" xml:lang="en">This is a foot note</note> 
+	 vocabulary.<note place="foot" xml:lang="en">This is a foot note</note>
+	 The<note place="foot" xml:lang="en">This is a foot note</note> 
+	 languages<note place="foot" xml:lang="en">This is a foot note</note> 
+	 only<note place="foot" xml:lang="en">This is a foot note</note> 
+	 differ<note place="foot" xml:lang="en">This is a foot note</note> 
+	 in<note place="foot" xml:lang="en">This is a foot note</note> 
+	 their<note place="foot" xml:lang="en">This is a foot note</note> 
+	 grammar,<note place="foot" xml:lang="en">This is a foot note</note> 
+	 their<note place="foot" xml:lang="en">This is a foot note</note> 
+	 pronunciation<note place="foot" xml:lang="en">This is a foot note</note> 
+	 and<note place="foot" xml:lang="en">This is a foot note</note> 
+	 their<note place="foot" xml:lang="en">This is a foot note</note> 
+	 most<note place="foot" xml:lang="en">This is a foot note</note> 
+	 common<note place="foot" xml:lang="en">This is a foot note</note> 
+	 words.<note place="foot" xml:lang="en">This is a foot note</note> 
+	 Everyone<note place="foot" xml:lang="en">This is a foot note</note> 
+	 realizes<note place="foot" xml:lang="en">This is a foot note</note> 
+	 why<note place="foot" xml:lang="en">This is a foot note</note> 
+	 a<note place="foot" xml:lang="en">This is a foot note</note> 
+	 new<note place="foot" xml:lang="en">This is a foot note</note> 
+	 common<note place="foot" xml:lang="en">This is a foot note</note> 
+	 language<note place="foot" xml:lang="en">This is a foot note</note> 
+	 would<note place="foot" xml:lang="en">This is a foot note</note> 
+	 be<note place="foot" xml:lang="en">This is a foot note</note> 
+	 desirable:<note place="foot" xml:lang="en">This is a foot note</note> 
+	 one<note place="foot" xml:lang="en">This is a foot note</note> 
+	 could<note place="foot" xml:lang="en">This is a foot note</note> 
+	 refuse<note place="foot" xml:lang="en">This is a foot note</note> 
+	 to<note place="foot" xml:lang="en">This is a foot note</note> 
+	 pay<note place="foot" xml:lang="en">This is a foot note</note> 
+	 expensive<note place="foot" xml:lang="en">This is a foot note</note> 
+	 translators.<note place="foot" xml:lang="en">This is a foot note</note>
+</p>
+
+     <p>To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages. The new common language will be more simple and regular than the existing European languages. It will be as simple as Occidental; in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is.<note place="foot" xml:lang="en">This is a foot note, it has another within it<note place="foot" xml:lang="en">This is a foot note, it has another within it<note place="foot" xml:lang="en">This is a foot note, it has another within it<note place="foot" xml:lang="en">This is a foot note, it has another within it<note place="foot" xml:lang="en">This is a foot note, it has another within it<note place="foot" xml:lang="en">This is a foot note, it has another within it<note place="foot" xml:lang="en">This is a foot note, it has another within it<note place="foot" xml:lang="en">This is a foot note, it has another within it<note place="foot" xml:lang="en">This is a foot note, it has another within it<note place="foot" xml:lang="en">This is a foot note, it has another within it<note place="foot" xml:lang="en">This is a foot note, it does not have another within it</note></note></note></note></note></note></note></note></note></note></note></p>
+      </div>
+    </body>
+  </text>
+</TEI>
